@@ -3,7 +3,6 @@ def rgb_to_hex(rgb)
   red, green, blue = rgb.split(',')
 
   # convert each component to a hexadecimal string and pad it with a leading zero if necessary
-  require 'pry' ; binding.pry
   red_hex = red.to_i.to_s(16).rjust(2, '0')
   green_hex = green.to_i.to_s(16).rjust(2, '0')
   blue_hex = blue.to_i.to_s(16).rjust(2, '0')
