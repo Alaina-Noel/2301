@@ -14,5 +14,12 @@ const translateBinary = (integer) => {
       integer = Math.floor(integer/2);
     }
   }
-  return parseInt(binaryResult.join(''));
+  let total = 0;
+  for (const number of binaryResult) {
+    if (number === 1) {
+      total += 1;
+    }
+  }
+  return total;
 }
+//could combine this into one step and just count the number of 1s that appear
