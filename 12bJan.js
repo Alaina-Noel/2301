@@ -12,16 +12,17 @@
 // findTarget([-3, -34, 2, 6, 40, -4], 1)
 // => []
 
-const findNums = (nums, target) => {
-  for (let i = 0; i < nums.length; i++) {
-    let currentNum = nums[i];
-      for (let j = 1; j < nums.length - 1; j++) {
-      console.log([currentNum, target - currentNum, nums[i]])
-      if (target - currentNum === nums[j]){
-        return [currentNum, nums[j]];
-      }
+const findTarget = (nums, target) => {
+  for (let i = 0; i < nums.length; i++)
+  for (let j = i + 1; j < nums.length; j++) {
+    if (target - nums[i] === nums[j]) {
+      return [nums[i],nums[j]];
     }
   }
   return [];
 }
+
+console.log (findTarget([1, 3, 4, 5, 10], 15));
+console.log (findTarget([1, 3, 4, 2], 8));
+
 
